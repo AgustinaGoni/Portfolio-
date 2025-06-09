@@ -12,6 +12,14 @@
     <div class="card">
       <h1>Agustina Goñi</h1>
       <p>Analista en Tecnologías de la Información | Full Stack Developer</p>
+
+      <div class="cta-buttons">
+        <a href="#" onclick="copiarEmail(); return false;" class="btn"><i class="fas fa-envelope"></i>agusgc11@gmail.com</a>
+        <div id="notificacion" class="toast">Email copiado al portapapeles</div>
+        <a href="https://github.com/AgustinaGoni" target="_blank" class="btn"><i class="fab fa-github"></i> GitHub</a>
+        <a href="https://www.linkedin.com/in/agustina-go%C3%B1i-613319348/" target="_blank" class="btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="docs/Agustina Goñi_CV.pdf" download class="btn"><i class="fas fa-file-download"></i> Descargar CV</a>
+      </div>
     </div>
   </header>
 
@@ -84,6 +92,18 @@
       </div>
     </div>
 
+<div class="project">
+  <img src="img/bigdata.png" alt="Proyecto Big Data NBA" />
+  <div class="content">
+    <h4>Análisis Big Data de la NBA (2024)</h4>
+    <p>
+      Proyecto académico del curso de Big Data de la Universidad ORT Uruguay. Consistió en el análisis exploratorio y modelado de datos de la NBA con herramientas como Pandas y Spark, desarrollando visualizaciones en Tableau para responder preguntas clave sobre jugadores, equipos y entrenadores. Se utilizó un modelo estrella para estructurar los datos y se trabajó con datasets tabulares reales.
+    </p>
+    <p class="tech">Python, Pandas, Apache Spark, Tableau, Jupyter Notebooks</p>
+    <a href="https://github.com/AgustinaGoni/Portfolio-/blob/main/docs/ObligatorioBD.pdf" target="_blank">Ver documentación</a>
+  </div>
+</div>
+
     <div class="project">
       <img src="img/ruleta.png" alt="Proyecto Ruleta" />
       <div class="content">
@@ -132,17 +152,7 @@
       </div>
     </div>
 
-     <div class="project">
-  <img src="img/bigdata.png" alt="Proyecto Big Data NBA" />
-  <div class="content">
-    <h4>Análisis Big Data de la NBA (2024)</h4>
-    <p>
-      Proyecto académico del curso de Herramientas de Big Data de la Universidad ORT Uruguay. Consistió en el análisis exploratorio y modelado de datos de la NBA con herramientas como Pandas y Spark, desarrollando visualizaciones en Tableau para responder preguntas clave sobre jugadores, equipos y entrenadores. Se utilizó un modelo estrella para estructurar los datos y se trabajó con datasets tabulares reales.
-    </p>
-    <p class="tech">Python, Pandas, Apache Spark, Tableau, Jupyter Notebooks</p>
-    <a href="https://github.com/AgustinaGoni/Portfolio-/blob/main/docs/ObligatorioBD.pdf" target="_blank">Ver documentación</a>
-  </div>
-</div>
+     
 
 
   </div>
@@ -155,5 +165,21 @@
       <a href="https://github.com/AgustinaGoni" target="_blank">GitHub</a>
     </p>
   </footer>
+
+  <script>
+  function copiarEmail() {
+    const email = "agusgc11@gmail.com";
+    navigator.clipboard.writeText(email).then(() => {
+      const toast = document.getElementById("notificacion");
+      toast.classList.add("show");
+
+      setTimeout(() => {
+        toast.classList.remove("show");
+      }, 1000);
+    });
+  }
+</script>
+
+
 </body>
 </html>
